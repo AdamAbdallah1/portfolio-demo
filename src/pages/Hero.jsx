@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
 
-// Motion variants for staggered animations
 const container = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2, // Delay between children
+      staggerChildren: 0.2,
     },
   },
 };
@@ -17,15 +16,14 @@ const fadeUp = {
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 bg-gradient-to-tr from-black via-gray-900 to-gray-800 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 bg-linear-to-tr from-black via-gray-900 to-gray-800 overflow-hidden">
       
-      {/* Floating Background Circles */}
       <motion.div
-        className="absolute top-0 left-1/2 w-[800px] h-[800px] -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl animate-[float_20s_linear_infinite]"
+        className="absolute top-0 left-1/2 w-200 h-200 -translate-x-1/2 rounded-full bg-blue-600/10 blur-3xl animate-[float_20s_linear_infinite]"
         style={{ zIndex: 0 }}
       />
       <motion.div
-        className="absolute bottom-0 right-1/3 w-[600px] h-[600px] rounded-full bg-purple-600/10 blur-3xl animate-[float_25s_linear_infinite]"
+        className="absolute bottom-0 right-1/3 w-150 h-150 rounded-full bg-purple-600/10 blur-3xl animate-[float_25s_linear_infinite]"
         style={{ zIndex: 0 }}
       />
 
@@ -35,7 +33,6 @@ const Hero = () => {
         animate="visible"
         className="text-center max-w-4xl space-y-6 relative z-10"
       >
-        {/* NAME */}
         <motion.h1
           variants={fadeUp}
           className="text-5xl md:text-7xl font-bold text-white tracking-tight"
@@ -43,7 +40,6 @@ const Hero = () => {
           Adam Abdallah
         </motion.h1>
 
-        {/* ROLE */}
         <motion.p
           variants={fadeUp}
           className="text-xl md:text-2xl text-gray-400 font-medium"
@@ -51,7 +47,6 @@ const Hero = () => {
           Frontend Developer / Web Developer
         </motion.p>
 
-        {/* TAGLINE */}
         <motion.p
           variants={fadeUp}
           className="text-gray-300 max-w-2xl mx-auto leading-relaxed"
@@ -60,7 +55,6 @@ const Hero = () => {
           and motion-driven UI. Helping businesses stand out online with premium websites.
         </motion.p>
 
-        {/* CTA BUTTONS */}
         <motion.div
           variants={fadeUp}
           className="mt-8 flex flex-col md:flex-row justify-center gap-4"
